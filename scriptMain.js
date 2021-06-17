@@ -60,6 +60,7 @@ function wrap1Info1Mostrar()   {
 function wrap1Cerrar()    {
     document.getElementById("wrapInfo1").setAttribute("style", "transform: scale(1,0);")
     document.getElementById("wrapInfo1Cont").setAttribute("style", "transition-duration: 0; transition-delay: 0s; opacity: 0;");
+    document.getElementById("wrap1ContentText").setAttribute("style", "z-index: -1;");
 }
 
 function wrap1Info2Mostrar()   {
@@ -70,6 +71,7 @@ function wrap1Info2Mostrar()   {
 function wrap2Cerrar()    {
     document.getElementById("wrapInfo2").setAttribute("style", "transform: scale(1,0);")
     document.getElementById("wrapInfo2Cont").setAttribute("style", "transition-duration: 0; transition-delay: 0s; opacity: 0;");
+    document.getElementById("wrap1ContentText").setAttribute("style", "z-index: -1;");
 }
 
 function wrap1Info3Mostrar()   {
@@ -80,4 +82,5 @@ function wrap1Info3Mostrar()   {
 function wrap3Cerrar()    {
     document.getElementById("wrapInfo3").setAttribute("style", "transform: scale(1,0);")
     document.getElementById("wrapInfo3Cont").setAttribute("style", "transition-duration: 0; transition-delay: 0s; opacity: 0;");
+    document.getElementById("wrap1ContentText").setAttribute("style", "z-index: -1;");
 }
