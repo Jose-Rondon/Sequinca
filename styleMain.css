@@ -1,0 +1,334 @@
+@import "normailze.css";
+
+:root   {
+    --mid-blue: hsla(216, 41%, 50%, 1);
+    --lighter-blue: hsla(216, 50%, 80%, 1);
+    --light-blue: hsla(216, 41%, 70%, 1);
+    --dark-blue: hsla(216, 41%, 30%, 1);
+    --dark-gray: hsla(0, 0%, 10%, 1);
+    --dark-gray-trans: hsla(0, 0%, 10%, .5);
+    --mid-gray: hsla(0, 0%, 30%, 1);
+    --light-gray: hsla(180, 1%, 70%, 1);
+    --lighter-gray: hsla(180, 1%, 85%, 1);
+    --orange: hsl(26, 100%, 57%);
+    --light-orange: hsl(26, 100%, 70%);
+    --lighter-orange: hsl(26, 100%, 80%);
+    --dark-orange: hsl(26, 100%, 38%);
+}
+
+html    {
+    min-height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+*   {
+    margin: 0;
+    padding: 0;
+}
+
+body    {
+    display: flex;
+    flex-flow: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--dark-blue);
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    background-color: var(--dark-gray);
+    height: 40px;
+    max-width: 100%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    place-items: center;
+    padding: 5px;
+}
+
+.navbar svg {
+    margin: auto;
+    fill: var(--lighter-blue)
+}
+
+.navbarLogo {
+    display: flex;
+    place-items: center;
+    margin: 0;
+}
+
+.iconHide   {
+    display: none;
+}
+
+.iconButton   {
+    position: relative;
+    display: flex;
+    width: 40x;
+    height: 40px;
+    margin-left: auto;
+    margin-right: 0;
+    background-color: transparent;
+}
+
+.buttonNav   {
+    display: flex;
+    margin: 0;    
+    width: 40px;
+    height: 40px;
+    fill: var(--lighter-blue);
+}
+
+.buttonNav:hover    {
+    cursor: pointer;
+    fill: var(--orange);
+    transition-duration: .4s;
+}
+
+.iconHide:checked ~ .iconButton .buttonNav  {
+    fill: var(--orange);
+}
+
+.iconHide:checked ~ .iconButton svg rect:first-child  {
+    animation-name: buttonNav;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.iconHide:checked ~ .iconButton svg rect:nth-child(2)  {
+    animation-name: buttonNav1;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.iconHide:checked ~ .iconButton svg rect:last-child  {
+    animation-name: buttonNav2;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.iconHide:checked ~ .iconButton .navMenu  {
+    transition-duration: .4s;
+    transform: scale(1,1);
+}
+
+.linksMenu   {
+    opacity: 0;
+}
+
+.iconHide:checked ~ .iconButton .navMenu > .linksMenu {
+    opacity: 1;
+}
+
+.navMenu   {justify-self: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 100%;
+    margin-top: 5px;
+    flex-direction: column;
+    right: -5px;
+    transform: scale(1,0);
+    transform-origin: top;
+    background-color: var(--light-gray);
+}
+
+.linksMenu  {
+    padding: 15px 20px;
+    background-color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.linksMenu:hover  {
+    background-color: var(--dark-gray);
+    color: var(--orange);
+    transition-delay: 0s;
+    transition-duration: .4s;
+}
+
+.wrap1  {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100;
+}
+
+.wrap1div   {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100;
+    overflow: hidden;
+    background-image: url(img/wrap1img.png);
+    background-size: 30;
+    background-attachment: scroll;
+    background-position: bottom center;
+}
+
+.wrap1Container {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-gray-trans);
+    position: relative;
+}
+
+.wrap1Img   {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(45deg, var(--dark-gray), var(--light-blue));
+}
+
+.wrap1Img svg   {
+    width: 80%;
+}
+
+.wrap1Img img   {
+    transform: scale(.8);
+}
+
+.wrap1ContentText   {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+    gap: 2rem;
+    z-index: 1000;
+}
+
+.slogan {
+    display: flex;
+    color: white;
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.wrap1Info  {
+    padding: .5rem 1rem;
+    background-color: var(--light-orange);
+    color: black;
+    border-radius: .4rem;
+    border-color: var(--orange);
+    transition-duration: .4s;
+}
+
+.wrap1Info:hover    {
+    cursor: pointer;
+    background-color: var(--lighter-orange);
+}
+
+.wrap1ContentText   {
+    display: flex;
+    color: white;
+    text-align: center;
+}
+
+.wrapInfo1  {
+    display: flex;
+    position: absolute;
+    background-color: hsla(0, 0%, 10%, .9);
+    z-index: 4;
+    transform: scale(1,0);
+    transform-origin: bottom;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .4s;
+    z-index: 500;
+}
+
+.wrapInfo1Cont  {
+    opacity: 0;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap1Cerrar    {
+    position: absolute;
+    width: 25px;
+    top: 8px;
+    right: 10px;
+}
+
+.wrap1Cerrar:hover    {
+    cursor: pointer;
+}
+
+.wrap1Title {
+    color: white;
+    text-align: center;
+}
+
+.wrap1Text {
+    padding: 0 1rem;
+    line-height: 1.5rem;
+    color: var(--lighter-gray)
+}
+
+.wrap1Menu  {
+    display: flex;
+    width: 90%;
+    position: absolute;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    top: 43.5%;
+    place-items: center;
+}
+
+.wrap1Icon1,
+.wrap1Icon3 {
+    width: 30px;
+    opacity: .25;
+    transition-duration: .4s;
+}
+
+.wrap1Icon1:hover,
+.wrap1Icon3:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.wrap1Icon2 {
+    width: 30px;
+    opacity: .3;
+}
+
+@keyframes buttonNav {
+    0% {transform: rotate(0deg) translate(0);}
+    100% {transform: rotate(45deg) translate(20%,-23%);}
+}
+
+@keyframes buttonNav1   {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes buttonNav2   {
+    0% {transform: rotate(0deg) translate(0);}
+    100% {transform: rotate(-45deg) translate(-50%,-9%);}
+}
