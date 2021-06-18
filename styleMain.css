@@ -222,7 +222,7 @@ body    {
     text-align: center;
 }
 
-.wrap1Info  {
+.wrap1Button  {
     padding: .5rem 1rem;
     background-color: var(--light-orange);
     color: black;
@@ -231,7 +231,7 @@ body    {
     transition-duration: .4s;
 }
 
-.wrap1Info:hover    {
+.wrap1Button:hover    {
     cursor: pointer;
     background-color: var(--lighter-orange);
 }
