@@ -99,7 +99,7 @@ function wrap2Cerrar()    {
     }
     slide = setInterval(slideshow1, 5000);
     document.getElementById("wrap1Icon2").setAttribute("style", "opacity: 0;");
-    document.getElementById("wrapInfo2").setAttribute("style", "transform: scale(1,0);")
+    document.getElementById("wrapInfo2").setAttribute("style", "transform: scale(1,0);");
     document.getElementById("wrapInfo2Cont").setAttribute("style", "transition-duration: 0; transition-delay: 0s; opacity: 0;");
 }
 
@@ -119,6 +119,46 @@ function wrap3Cerrar()    {
     }
     slide = setInterval(slideshow1, 5000);
     document.getElementById("wrap1Icon2").setAttribute("style", "opacity: 0;");
-    document.getElementById("wrapInfo3").setAttribute("style", "transform: scale(1,0);")
+    document.getElementById("wrapInfo3").setAttribute("style", "transform: scale(1,0);");
     document.getElementById("wrapInfo3Cont").setAttribute("style", "transition-duration: 0; transition-delay: 0s; opacity: 0;");
+}
+
+function wrap4TextIShow1()   {
+    document.getElementById("wrap4Info1").setAttribute("style", "transform: scale(1);");
+    document.getElementById("wrap4IC1").setAttribute("style", "transition-delay: .4s; transition-duration: .4s; opacity: 1;");
+}
+
+function cerrar4TextI1()   {
+    document.getElementById("wrap4Info1").setAttribute("style", "transform: scale(0);");
+    document.getElementById("wrap4IC1").setAttribute("style", "transition-delay: 0s; transition-duration: 0s; opacity: 0;");
+}
+
+function wrap4TextIShow2()   {
+    document.getElementById("wrap4Info2").setAttribute("style", "transform: scale(1);");
+    document.getElementById("wrap4IC2").setAttribute("style", "transition-delay: .4s; transition-duration: .4s; opacity: 1;");
+}
+
+function cerrar4TextI2()   {
+    document.getElementById("wrap4Info2").setAttribute("style", "transform: scale(0);");
+    document.getElementById("wrap4IC2").setAttribute("style", "transition-delay: 0s; transition-duration: 0s; opacity: 0;");
+}
+
+function wrap4TextIShow3()   {
+    document.getElementById("wrap4Info3").setAttribute("style", "transform: scale(1);");
+    document.getElementById("wrap4IC3").setAttribute("style", "transition-delay: .4s; transition-duration: .4s; opacity: 1;");
+}
+
+function cerrar4TextI3()   {
+    document.getElementById("wrap4Info3").setAttribute("style", "transform: scale(0);");
+    document.getElementById("wrap4IC3").setAttribute("style", "transition-delay: 0s; transition-duration: 0s; opacity: 0;");
+}
+
+function wrap4TextIShow4()   {
+    document.getElementById("wrap4Info4").setAttribute("style", "transform: scale(1);");
+    document.getElementById("wrap4IC4").setAttribute("style", "transition-delay: .4s; transition-duration: .4s; opacity: 1;");
+}
+
+function cerrar4TextI4()   {
+    document.getElementById("wrap4Info4").setAttribute("style", "transform: scale(0);");
+    document.getElementById("wrap4IC4").setAttribute("style", "transition-delay: 0s; transition-duration: 0s; opacity: 0;");
 }
