@@ -5,8 +5,9 @@
     --lighter-blue: hsla(216, 50%, 80%, 1);
     --light-blue: hsla(216, 41%, 70%, 1);
     --dark-blue: hsla(216, 41%, 30%, 1);
+    --back-blue: hsl(210, 22%, 27%);
     --dark-gray: hsla(0, 0%, 10%, 1);
-    --dark-gray-trans: hsla(0, 0%, 10%, .5);
+    --dark-gray-trans: hsla(0, 0%, 10%, .7);
     --mid-gray: hsla(0, 0%, 30%, 1);
     --light-gray: hsla(180, 1%, 70%, 1);
     --lighter-gray: hsla(180, 1%, 85%, 1);
@@ -17,9 +18,9 @@
 }
 
 html    {
-    min-height: 100%;
+    display: flex;
+    height: 100%;
     box-sizing: border-box;
-    margin: 0;
 }
 
 ::before,
@@ -30,15 +31,16 @@ html    {
 *   {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body    {
     display: flex;
     flex-flow: column;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--dark-blue);
-    min-width: 100%;
-    max-width: 100%;
+    background-color: var(--back-blue);
+    width: 100%;
+    min-height: 100%;
 }
 
 .navbar {
@@ -128,7 +130,8 @@ body    {
     opacity: 1;
 }
 
-.navMenu   {justify-self: center;
+.navMenu   {
+    justify-self: center;
     align-items: center;
     display: flex;
     position: absolute;
@@ -220,12 +223,13 @@ body    {
     color: white;
     font-size: 1.9rem;
     text-align: center;
+    font-style: italic;
 }
 
 .wrap1Button  {
     padding: .7rem 1rem;
     background-color: var(--orange);
-    color: white;
+    color: var(--dark-gray);
     border-width: .2rem;
     border-color: var(--orange);
     transition-duration: .4s;
@@ -235,7 +239,8 @@ body    {
 .wrap1Button:hover    {
     cursor: pointer;
     background-color: var(--dark-orange);
-    border-color: var(--orange);    
+    border-color: var(--orange);
+    color: white;
 }
 
 .wrap1ContentText   {
@@ -280,6 +285,7 @@ body    {
 .wrap1Title {
     color: white;
     text-align: center;
+    font-style: italic;
 }
 
 .wrap1Text {
@@ -316,6 +322,73 @@ body    {
 .wrap1Icon2 {
     width: 30px;
     opacity: .3;
+}
+
+.wrap3  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: transparent;
+}
+
+.wrap3Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-style: italic;
+    line-height: 1.9rem;
+    text-align: center;
+    font-weight: bolder;
+    padding: 2rem 0;
+}
+
+.wrap3ImgCont   {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(160px, 1fr));
+    background-color: white;
+}
+
+.wrap3ImgCont img {
+    display: flex;
+    width: 100%;
+}
+
+.wrap3Button {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 1rem 0 1rem;
+}
+
+.wrap3Text  {
+    color: var(--light-gray);
+    width: 50%;
+    font-size: smaller;
+}
+
+.wrap4  {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0;
+}
+
+.wrap4TextCont  {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    gap: 1rem;
+}
+
+.wrap4title {
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.wrap4Text  {
+    color: var(--light-gray);
 }
 
 @keyframes buttonNav {
