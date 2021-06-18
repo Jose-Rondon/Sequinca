@@ -223,17 +223,19 @@ body    {
 }
 
 .wrap1Button  {
-    padding: .5rem 1rem;
-    background-color: var(--light-orange);
-    color: black;
-    border-radius: .4rem;
+    padding: .7rem 1rem;
+    background-color: var(--orange);
+    color: white;
+    border-width: .2rem;
     border-color: var(--orange);
     transition-duration: .4s;
+    font-weight: bold;
 }
 
 .wrap1Button:hover    {
     cursor: pointer;
-    background-color: var(--lighter-orange);
+    background-color: var(--dark-orange);
+    border-color: var(--orange);    
 }
 
 .wrap1ContentText   {
